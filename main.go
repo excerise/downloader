@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/polaris1119/downloader/Test"
 	"log"
 	"os"
 	"runtime"
@@ -45,7 +46,8 @@ func main() {
 			filename := c.String("output")
 			concurrency := c.Int("concurrency")
 			resume := c.Bool("resume")
-			return NewDownloader(concurrency, resume).Download(strURL, filename)
+
+			return Test.NewDownloader(concurrency, resume).Download(strURL, filename)
 		},
 	}
 
